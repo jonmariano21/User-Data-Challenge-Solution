@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JMViewController : UIViewController
+/* 
+ * UITableViewDataSource: tells us what type of info to add to our table view
+ * UITableViewDelegate: tells our table view how to function when user taps on it etc.
+ */
+
+@interface JMViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSArray *users;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
